@@ -1,2 +1,7 @@
 debug-x86-Linux-2.1
 .consign
+*.vcxproj.user
+*.suo
+*.sdf
+Debug
+Release
