@@ -21,7 +21,6 @@ sub launch {
 }
 
 Depends $env 'foo',
-  'out/wolfsp.x86',
   'out/' . $BASEGAME . '/cgamei386.so',
   'out/' . $BASEGAME . '/qagamei386.so',
   'out/' . $BASEGAME . '/uii386.so';
