@@ -38,9 +38,13 @@ If you have questions concerning this license or the applicable additional terms
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdarg.h>
 
 #define MAX_QPATH 64
-#include "../bspc/qbsp.h"
+//#include "../bspc/l_cmd.h"
+#include "l_log.h"
+
+extern int verbose;
 
 #define MAX_LOGFILENAMESIZE     1024
 
