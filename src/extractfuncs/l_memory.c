@@ -39,6 +39,7 @@ If you have questions concerning this license or the applicable additional terms
 #include <stdio.h>
 #include <string.h>
 #include "l_log.h"
+#include "l_memory.h"
 
 //#define MEMDEBUG
 //#define MEMORYMANEGER

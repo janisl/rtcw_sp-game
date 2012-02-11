@@ -41,7 +41,6 @@ If you have questions concerning this license or the applicable additional terms
 #include <stdarg.h>
 
 #define MAX_QPATH 64
-//#include "../bspc/l_cmd.h"
 #include "l_log.h"
 
 extern int verbose;
