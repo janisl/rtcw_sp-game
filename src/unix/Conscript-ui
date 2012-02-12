@@ -1,6 +1,6 @@
 # ui
 
-Import qw( BASE_CFLAGS CONFIG_DIR BUILD_DIR BASEGAME CC CXX LINK );
+Import qw( BASE_CFLAGS CONFIG_DIR BUILD_DIR BASEGAME CC CXX LINK dllarch );
 
 $env = new cons(
 	CC => $CC,
@@ -25,6 +25,6 @@ $env = new cons(
 $FILESREF = \@FILES;
   
 # FIXME CPU string  
-Program $env 'uii386.so', @$FILESREF;
-Install $env '#' . $CONFIG_DIR . '/out/' . $BASEGAME, 'uii386.so';
+Program $env 'ui'.$dllarch.'.so', @$FILESREF;
+Install $env '#' . $CONFIG_DIR . '/out/' . $BASEGAME, 'ui'.$dllarch.'.so';
 
