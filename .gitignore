@@ -1,5 +1,4 @@
-debug-x86-Linux-2.1
-.consign
+build
 *.vcxproj.user
 *.suo
 *.sdf
