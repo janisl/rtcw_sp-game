@@ -37,6 +37,8 @@ static intptr_t ( QDECL * syscall )( int arg, ... ) = ( int ( QDECL * )( int, ..
 
 #if defined( __MACOS__ )
 #pragma export on
+#elif __GNUC__ >= 4
+__attribute__((visibility("default")))
 #endif
 void dllEntry( intptr_t ( QDECL *syscallptr )( int arg,... ) ) {
 #if defined( __MACOS__ )
