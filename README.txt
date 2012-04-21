@@ -1,5 +1,5 @@
-Return to Castle Wolfenstein single player GPL source release
-=============================================================
+Return to Castle Wolfenstein single player GPL game source
+==========================================================
 
 This file contains the following sections:
 
@@ -8,6 +8,15 @@ LICENSE
 
 GENERAL NOTES
 =============
+
+Game engine:
+------------
+
+This release contains only the source of the game DLL files. It was separated
+from JLQuake in order to keep it clean and because there are no plans on doing
+any improvements on game code. 32 bit game DLLs built from this release should
+still be compatible with original engine, but it's recomended to use an improved
+game engine such as JLQuake.
 
 Game data and patching:
 -----------------------
@@ -23,34 +32,29 @@ http://store.steampowered.com/app/9010/
 Linux note: due to the game CD containing only a Windows version of the game,
 you must install and update the game using WINE to get the game data.
 
-Compiling on win32:
--------------------
+Compiling on Windows:
+---------------------
 
 A Visual C++ 2010 project is provided in src\wolf.sln.
 The solution file is compatible with the Express release of Visual C++.
 
-You will need to execute src\extractfuncs\extractfuncs.bat to generate src\game\g_save.c
+You can test your binaries by replacing qagamex86.dll, cgamex86.dll, uix86.dll
+at the top of the RTCW install. 64 bit version file names are qagamex86_64.dll,
+cgamex86_64.dll and uix86_64.dll. You'll need a 64 bit version of JLQuake to
+run them.
 
-You can test your binaries by replacing qagamex86.dll, cgamex86.dll, uix86.dll at the top of the RTCW install
+Compiling on GNU/Linux and other UNIX based systems:
+----------------------------------------------------
 
-Compiling on GNU/Linux x86:
----------------------------
+mkdir build
+cd build
+cmake ..
+make
 
-Go to the src/unix directory, and run the cons script
-(cons is a perl based precursor to scons, this is what we were using at the time)
-
-Run ./cons -h to review build options. Use ./cons -- release to compile in release mode.
-
-If problems occur, consult the internet.
-
-Other platforms, updated source code, security issues:
-------------------------------------------------------
-
-If you have obtained this source code several weeks after the time of release
-(August 2010), it is likely that you can find modified and improved
-versions of the engine in various open source projects across the internet.
-Depending what is your interest with the source code, those may be a better
-starting point.
+You can test your binaries by replacing qagamei386.so, cgamei386.so, uii386.so
+at the top of the RTCW install. 64 bit version file names are qagamex86_64.so,
+cgamex86_64.so and uix86_64.so. You'll need a 64 bit version of JLQuake to
+run them.
 
 
 LICENSE
